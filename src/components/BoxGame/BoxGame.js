@@ -70,10 +70,9 @@ class BoxGame extends Component {
     }
 
     const style = {
-        gridTemplateColumns: "repeat(5, 75px)", 
         gridTemplateRows: `repeat(${this.props.boardSize/5}, 75px)`, 
+        gridTemplateColumns: "repeat(5, 75px)", 
         gridGap: "0",
-        justifyContent: "center", 
     };
     
     return(
@@ -82,8 +81,12 @@ class BoxGame extends Component {
           <p className="neon neon--lights">Lights</p>
           <p className="neon neon--out">Out</p>
         </div>
-        <div style={style} className={`${this.winGame() ? "hidden" : "grid"}`}>
-          {boardSizeArray.map(b => <Box key={b} position={b} toggle={toggleHandler} active={this.state.boxStates[b-1] ? "bg-blue-400" : "bg-gray-800"}/>)}   
+        <div style={style} className={`box-grid ${this.winGame() ? "hidden" : "grid"}`}>
+          {boardSizeArray.map(b => <Box
+           key={b}
+           position={b}
+           toggle={toggleHandler}
+           active={this.state.boxStates[b-1] ? "bg-blue-400" : "bg-gray-800"}/>)}   
         </div>
         <div className={`text-white text-3xl text-center mt-80 ${this.winGame() ? "" : "hidden"}`}>YOU WON!!!</div>
       </div>

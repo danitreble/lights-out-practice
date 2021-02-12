@@ -1,13 +1,12 @@
 .box-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 75px);
-  grid-template-rows: repeat(5, 75px);
-  grid-gap: 0;
+  width: 375px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 25px white;
 }
 
 .neon {
   font-family: 'Sacramento', cursive;
-  font-size: 8rem;
+  font-size: 6rem;
   text-align: center;
   text-shadow: 8px 8px 10px;
   animation-name: glow;
