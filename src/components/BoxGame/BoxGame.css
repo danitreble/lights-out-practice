@@ -1,0 +1,32 @@
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  grid-template-rows: repeat(5, 75px);
+  grid-gap: 0;
+}
+
+.neon {
+  font-family: 'Sacramento', cursive;
+  font-size: 8rem;
+  text-align: center;
+  text-shadow: 8px 8px 10px;
+  animation-name: glow;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+  margin-bottom: 2rem;
+}
+
+@keyframes glow{
+  from{text-shadow:5px 5px 8px}
+  to{text-shadow:5px 5px 12px}
+}
+
+
+.neon--lights {
+  color: palevioletred;
+}
+
+.neon--out {
+  color: blue;
+}
